@@ -1,0 +1,40 @@
+Introducing vi and Vim 
+  .Uno de los usos más importantes de una computadora es trabajar con texto.
+  .Acciones que se pueden hacer con texto
+      .Componer texto(Composing new text)
+      .Reorganizando (Rearranging)
+      .Deleting 
+      .Rewriting
+  .Los edutores de texto(Text Editors) procesa el contenido de cualquier tipo de
+   texto.
+  .Vi tiene una larga historia como editor de texto(Text Editor) de Unix.
+ 
+Texto Editors and Text Editing
+  .Los editores de texto evolucionaron con el tiempo,inicialmente eran
+   line editors(ed and ex) para usarse en terminales seriales que imprimen en 
+   papel de alimentación continua,se llamaba asi porque trabajabas con una o 
+   algunas líneas a la vez.
+  .Con la introducción cathode-ray tube(CRT) terminales con cursor de 
+   direccionamiento ,los editores de linea evolucionaron a screen editors(Emacs and vi)
+  .Con la introducción de graphical user interface(GUI) environments.Los editores de 
+   pantallas(screen editors) evolucionaron hasta convertirse en editores gráficos de 
+   texto.(gedit-> Gnome  and MS-Windows-> Notepad++)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
