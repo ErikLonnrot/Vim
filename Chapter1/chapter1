@@ -10,6 +10,9 @@ Introducing vi and Vim
   .Vi tiene una larga historia como editor de texto(Text Editor) de Unix.
  
 Texto Editors and Text Editing
+
+Text Editors
+
   .Los editores de texto evolucionaron con el tiempo,inicialmente eran
    line editors(ed and ex) para usarse en terminales seriales que imprimen en 
    papel de alimentación continua,se llamaba asi porque trabajabas con una o 
@@ -18,13 +21,71 @@ Texto Editors and Text Editing
    direccionamiento ,los editores de linea evolucionaron a screen editors(Emacs and vi)
   .Con la introducción de graphical user interface(GUI) environments.Los editores de 
    pantallas(screen editors) evolucionaron hasta convertirse en editores gráficos de 
-   texto.(gedit-> Gnome  and MS-Windows-> Notepad++)
+   texto.(gedit-> Gnome  and MS-Windows-> Notepad++
+  .Vi existe en multiples encarnaciones,existe la versión original de UNIX y 
+   multiples versiones (clones),programas escritos desde cero que se comporten como
+   vi.Vim se ha canvertido en uno de ellos.
+  .Para los principiantes vi resulta poco intuitivo y engorroso.Normalmente se usa 
+   teclas de control especiales para funciones de procesamiento de texto y permite
+   escribir con nomalidad,vi usa casi todas las teclas habituales para ejecutar 
+   comandos,para poder escribir en la pantalla debes de estar en insert mode antes de
+   escribir algo en pantalla.
+  .Si deseas obtener documentos formateados,debes escribir instrucciones especificas
+   llamadas(fomatting codes) que utiliza un programa de formato independientemente para
+   controlar la apariencia de la copia impresa.
+  .La forma mas facil de usar un lenguage de marcado(markup language)es con un editor 
+  de texto(texto editor).
 
+Text Editing 
+  .Los componentes de la edición:
+    1)insert text              (olvidaste una palabra o oración)
+    2)delete text               (carácter erroneo o un parrafo completo)
+    3)change letters and word   (corregir errores ortográficoso cambios sobre terminos)
+    4)move text                 (mover texto a otro lugar del archivo)
+    5)copy text                 (copiar texto para duplicarlo en otra parte del 
+                                archivo)
+ 
+  .The basic command:
+    i (Insert)
+    cw(Change word)
+    
+  .Usando letras como comandos puedes editar un archivo a gran velocidad.No tienes
+   que memorizar conjunto de teclas de función.
+   ¡Nunca tendras que soltar el teclado ni lidiar con multiples niveles del menú!
+   La mayoria de comando los puedes recordar por las letras que lo ejecutan.
+  
+  En general,vi and Vim command:
+   .Are case sensitive(upper case and lower case keystrokes mean different things;I 
+   is different from i)
+   .No requiere que preciones ENTER después del comando.
+   
+A Brieft Historical Perspective
+  .Vi se remonta a la epoca en que usuarios de computadoras trabajaban con terminales
+  CRT conectadas mediante serie a minicomputadoras centrales.Se usaban cientos de tipos
+  diferentes de terminales en todo el mundo y las acciones que realizaban estas 
+  terminales eran similares(limpiar la pantalla,mover el cursor,etc).El sistema
+  UNIX permitia elegir los carácteres para las teclas de retroceso,generación de una 
+  señal de interrupción,reanudar la salida.Estas funciones se gestionaban(y aún se 
+  gestionan) con el comando stty.
+  .La versión original de Vi para Berkeley Unix version extraia el código de la 
+  información de la terminal(dificil de modificar) y lo convertia en una base de texto
+  con la capacidades de la terminal(facil de modificar) gestionada por la biblioteca 
+  termcap.En 1980,System V introdujo una base binaria de información de terminal y la
+  biblioteca terminfo.Para indicarle a vi que terminal se tenía,era necesario configurar 
+  la variable de entorno TERM.Se hacia normalmente en un archivo de inicio de shell,como
+  el archivo .profile o .login.Termcap no se utiliza.Los sistemas GNU/Linux utilizan
+  las bibliotecas ncurses,que proporcionan un superconjunto compatible de la base de 
+  datos y las capacidades de la biblioteca terminfo de system V.
 
-
-
-
-
+  .Hoy en día se usa emuladores de terminal en un entorno gráfico(como Gnome Terminal)
+   El sistema casi siempre se encarga de configurar TERM automaticamente.
+  
+  .El usuario de vi de antaño tenía que estar preparado para que el sistema se 
+   bloqueaba,por lo que vi incluia soporte para recuperar archivos que se estaban
+   editando cuando vi se bloqueara.
+   
+Opening and Closing Files
+  .Puedes usar vi para editar cualquier tipo de texto.
 
 
 
