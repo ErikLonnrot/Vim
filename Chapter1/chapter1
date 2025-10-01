@@ -85,7 +85,62 @@ A Brieft Historical Perspective
    editando cuando vi se bloqueara.
    
 Opening and Closing Files
-  .Puedes usar vi para editar cualquier tipo de texto.
+  .Puedes usar vi para editar cualquier tipo de texto.El editor copia el archivo que
+  vas a editar en un buffer(área reservada temporalemente en la memoria)muestra el 
+  buffer y te permite añadir,modificar y eliminar texto.Cuando se guarda la ediciones
+  el editor copia el buffer editado en un archivo permanente,reemplazando el archivo
+  anterior con el mismo nombre.Ten en mente que siempre estas trabajando con una copia
+  de tu archivo en el buffer y que tus ediciones no afectan al archivo original.Guardar
+  las ediciones se llama "writing the buffer" or  "writing your file".
+
+Opening a File from the Command Line 
+  .vim es el comando de Unix que invoca al editor Vim para un archivo existente o uno
+  nuevo
+    vim [filename] or vim[filename]
+  .En caso de que se omita el nombre el archivo el editor de texto abrira un archivo
+  sin nombre [unnamed buffer],se puede asiganar un nombre al escribir el búfer en un 
+  archivo.
+  .Un nombre debe ser unico dentro de un directorio.
+  .Directory = Folder
+  .El nombre del archivo puede tener cualquier caracter de 8 bits excepto (/),el slash 
+  se usa para separar archivos y directorios.
+  .Los nombres de archivos consisten en cualquier combinación de letras mayusculas y
+  minusculas,numeros,caracter punto(.) y underscore(_).Remember que Unix es case 
+  sensitive es decir lowercase letters  es diferente de uppercase letters 
+  .Si quieres abrir un nuevo archivo en un directorio llamado practice:
+    $ vim practice
+  .Las tiltes (~) indican que no hay texto en el archivo,ni siquiera lineas en blanco,
+  the prompt line(status line) en la parte inferior muestra el nombre y el estado
+  del archivo.
+  .Use the relative pathname
+    $ vim letter
+  .Full pathname:
+    $ vi /home/borges/Desktop/Vim/practice
+  
+  .Podemos abrir un archivo desde vim
+    e: [filename]
+
+Modus Operandi
+  .El concepto de current "mode" es fundamental para trabajar con vi.Tenemos 2
+  modos:
+    1)Command mode
+    2)Insert mode 
+    The ex command mode puede considerarse un tercer modo.
+  .Al iniciar el editor comenzaras en "command mode" donde cada tecla que preciones
+   representa un comando.En inser mode todo lo que escribes se convierte en texto en 
+   tu archivo.Presiona ESC para para forzar al editor en "command mode".Para saber que
+   estas en modo comando el editor emitira un pitido cuando presiones ESC.
+   Command mode también conocido como "beep mode".
+
+Saving and Quitting a file
+  .El comando para guardar las modificaciones y voler al command prompt es 
+   ZZ(uppercase).Primero debe asegurarse que esta en "command mode" y para eso 
+   presione ESC y despues ZZ
+  .También puedes guardar los archivo con los comandos ex
+    :w  (write your file)
+    :q  (quit)
+    :wq (save your edits and quit)
+    (:wq is equivalent to ZZ)
 
 
 
