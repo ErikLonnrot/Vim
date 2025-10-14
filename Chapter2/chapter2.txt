@@ -42,10 +42,52 @@ Single Movements
       .k   (Up one line   )
       .l   (Right one space)
   
+  .También puedes usar the cursor arrow key.Al principio puede parecer incómodo usar
+   teclas de letras en lugar de flechas para mover el cursor,puedes moverte sin la 
+   necesidad de levantar los dedos del centro del teclado.Recuerda pusar ESC antes de 
+   moverte para asegurarte que esta en el modo comando.Cuando avances lo máximo posible
+   en la dirección,oiras un pitido y el cursor se detendra.No puedes mover el cursor 
+   mas alla de una tilde (~)que representa una línea sin texto,ni puedes mover el cursor
+   por encima de la primera línea de texto.
   
-
-
-
+Why h,j,k and l?
+  .Vi tenía una curva de aprendizaje muy pronunciada y los usuarios primerizos querian
+   usar las teclas de flechas en sus terminales para moverse por el archivo.
+   Las teclas de flechas no funcionaban en Vi,por una buena razón.Usuarios tenían
+   terminales de diferentes marcas y cada uno de ellas enviaba código diferente
+   al presionarla.Bill[Joy] trabajaba desde casa con una terminal Lear-Siegler ADM-3A.
+   La ADM-3A se publicitaba ampliamente como:"dumb terminal" pues no tenia muchas 
+   funciones sofisticadas como las teclas de fecha.LSI pinto flechas en las teclas
+   h,j,k y l .Bill configuro los comandos de vi para que coincidieran:
+     h : movia el cursor a la izquierda
+     j : movia el cursor hacia abajo
+     k : movia el cursor hacia arriba
+     l : movia el cursor hacia la derecha 
+  
+  ¿Qué pasaba si queria escribir una palabra que tuviera h ?
+  .Significaba que estabas en "Command mode" donde cada tecla presionada es un comando o
+  en "input mode" donde las pulsaciones se añadian al archivo.El comando i te ponia 
+  en "input mode" y la tecla escape te devolvia al "Command mode".
+  
+  ¿Cómo hacer que las teclas de flechas funciones en Vi?
+  .Estas teclas enviaban secuencias de dos o tres carácteres empezando por ESC y como 
+   sabemos ESC era un comando muy importante en Vi.Te saca del modo entrada y si estas 
+   fuera de el,emitia un pitido,una de las primeras cosas que aprendiste de Vi es que 
+   si no sabias en que modo estabas presionabas la tecla ESC hasta que sonaba y entonces
+   sabias que estabas en modo comando.
+  .Vi usaba un archivo de base de datos de capacidades de terminales llamado "termcap",
+   que le indicaba que códigos,para cada modelo de terminal,devía enviar para mover el
+   cursor,limpiar la pantalla,etc.Entonces si el ordenador recibia una tecla de ESC
+   ¿el usuario estaba presionando una tecla de ESC o una flecha?¿Debia el editor salir
+   del modo entrada o esperar que hubiera más texto que interpretar una flecha?
+  .Afortunadamente una nueva función de UNIX permitía al editor esperar brevemente para
+   ver si aparecia otro carácter.Configure "termcap" como si ADM-3A tuviera teclas de
+   flecha y luego borre los comandos h,j,k y l predefinidos.Al día siguiente tenía a una
+   fila de estudiantes de informática frente a la puerta de mi oficina,querian saber
+   porque había roto hjkl,ahora podía usar las teclas de flechas en su lugar.No lo 
+   entiendes nos gusta usar hjkl! Somos mecanógrafos,nuestros dedos estas justo encima 
+   de las teclas hjkl,!Devuelvanos nuestros comandos hjkl¡.Volví a instalar hjkl y 
+   también deje activada las flechas de dirección.
 
 
 
