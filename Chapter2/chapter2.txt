@@ -1,0 +1,51 @@
+Simple Editing
+  .Empezar por aprender los comandos básicos
+  .Observe los patrones de uso que los comandos tienen en común.
+  .Busque más tareas que pueda delegar a su editor y luego el comando que lo realize.
+
+Vi Commands 
+  .Vi & Vim tienen dos modos principales:
+    1)Command mode
+    2)Insert mode
+    3)Command line(colon prompt)
+  .Al abrir un archivo por primera vez este estara en command mode y el editor 
+   espera a que introdusca un comando.
+  .Podemos pensar en los distintos modos como 2 teclados diferentes,
+    .Modo inserción:el teclado funciona con normalidad.
+    .Modo comando:Cada tecla tiene un nuevo significado es inicia una instrucción.
+  .Una de las maneras para ingresar al modo de inserción es presionando la letra i,para
+   decirle a Vim que quieres dejar de presionar texto puedes usar la tecla ESC,retrocede
+   un espacio y regresa al modo de comando.
+  .Vim permite definir un margen derecho y proporciona un retorno de carro(Carriage 
+   return).
+  .¿Qué es un retorno de carro(carriage return)?
+    .El retorno de carro(CR) es uno de los carácteres de control que hace que se mueva
+     el cursor hacia la primera posición en una línea,muchas veces usado con un salto
+     de línea(LF).Algunos editores añaden junto con el salto de línea el retorno de 
+     carro.
+  .Las máquinas de escribir electricas lo llamaron retorno de carro o solo retorno
+   (return en Inglés)  cuyo simbolo es  ↵
+  .Cuando no sepas en que modo estas pulsa ESC una o dos veces,cuando oigas el pitido
+   estarás en modo comando.
+
+Moving the Cursor in Command Mode
+  .La mayor parte del tiempo estaras moviendote por el archivo y ejecutando comandos.El
+   modo comando puede colocar el cursor en cualquier parte del archivo.Existen comandos 
+   en vi que nos permiten mover el cursor: arriba,abajo,izquierda y derecha.Avanzar o
+   retroceder bloques de texto como palabras,oraciones o parrafos.
+
+Single Movements  
+  .Las teclas h,j,k,l justo debajo de las yemas de los dedos,mueven el cursor de la 
+   siguiente manera:
+      .h   (Left one space)
+      .j   (Down one line )
+      .k   (Up one line   )
+      .l   (Right one space)
+  
+  
+
+
+
+
+
+
